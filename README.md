@@ -6,8 +6,6 @@
 
 Camada de backend do **ReUseBairro**: plataforma para anunciar móveis e eletrônicos que seriam descartados na rua (gerando sujeira, poluição e alagamentos) e permitir que outra pessoa faça a coleta e o reaproveitamento.
 
-**Integrantes:** _preencher os nomes da equipe_
-
 ## Solução
 API REST em **Java 17 + Spring Boot 3**, executada pelo terminal. É o backend do app mobile ReUseBairro (Expo/React Native), que pode consumir estes endpoints no lugar do mock.
 
