@@ -11,12 +11,11 @@ Camada de backend do **ReUseBairro**: plataforma para anunciar móveis e eletrô
 | | |
 |---|---|
 | Nome da CitizenTech | ReUseBairro |
-| Cidade e bairro | ‹preencher› |
 | Cidadão beneficiado | Moradores do bairro que têm móveis e eletrônicos para descartar, e pessoas que podem aproveitar esses itens (reparar, reutilizar ou revender) |
 | Problema, em uma frase | Móveis e eletrônicos descartados nas ruas geram sujeira, poluição e entopem bueiros, contribuindo para alagamentos |
 | Como funciona | O cidadão se cadastra e publica o item com endereço de retirada. Outra pessoa encontra o anúncio (filtrando por categoria, bairro e status), combina a retirada e registra a coleta, e o item passa a constar como coletado |
 | O que cada parte faz | **App mobile** (Expo/React Native): porta de entrada do cidadão, onde ele consulta, anuncia e coleta. **API REST** (este repositório): regras de negócio, validação e persistência. **Banco de dados** (H2 + Flyway): guarda usuários e itens, com o esquema versionado por migrações. **Swagger**: documentação interativa dos endpoints |
-| Link do repositório | https://github.com/‹usuario›/ReUseBairroServices |
+| Link do repositório | [https://github.com/‹usuario›/ReUseBairroServices](https://github.com/gabriel-lacerda918/ReUseBairroServices) |
 | Indicador de impacto | Taxa de coleta = itens com status `COLETADO` ÷ total de itens anunciados. Cada item coletado é um item que deixou de ser descartado na rua. Pode ser consultado com `GET /api/itens?status=COLETADO` |
 | ODS conectados | **ODS 11** (Cidades e Comunidades Sustentáveis), pela redução do lixo urbano e dos pontos de alagamento; **ODS 12** (Consumo e Produção Responsáveis), pelo reaproveitamento de itens em vez de descarte |
 
