@@ -1,0 +1,66 @@
+### Para usar no VS Code: extensão "REST Client" (humao.rest-client). Clique em "Send Request" acima de cada bloco.
+@base = http://localhost:8080
+
+### 1. Listar itens
+GET {{base}}/api/itens
+
+### 2. Filtrar itens (categoria, bairro, status)
+GET {{base}}/api/itens?categoria=MOVEL&bairro=assun&status=DISPONIVEL
+
+### 3. Buscar item por id
+GET {{base}}/api/itens/1
+
+### 4. Cadastrar usuário
+POST {{base}}/api/usuarios
+Content-Type: application/json
+
+{ "nome": "Carla Mendes", "email": "carla@email.com", "bairro": "Jardim" }
+
+### 5. Listar usuários
+GET {{base}}/api/usuarios
+
+### 6. Publicar item
+POST {{base}}/api/itens
+Content-Type: application/json
+
+{
+  "titulo": "Mesa de escritório",
+  "descricao": "Madeira, em bom estado",
+  "categoria": "MOVEL",
+  "bairro": "Centro",
+  "endereco": "Rua Teste, 10",
+  "cep": "09000000",
+  "anuncianteId": 1
+}
+
+### 7. Atualizar item
+PUT {{base}}/api/itens/1
+Content-Type: application/json
+
+{
+  "titulo": "Sofá de 3 lugares (atualizado)",
+  "descricao": "Bom estado",
+  "categoria": "MOVEL",
+  "bairro": "Vila Assunção",
+  "endereco": "Rua das Flores, 120",
+  "cep": "09000000",
+  "anuncianteId": 1
+}
+
+### 8. Registrar coleta (usuário 2 coleta item 1)
+PATCH {{base}}/api/itens/1/coleta
+Content-Type: application/json
+
+{ "coletorId": 2 }
+
+### 9. Erro de validação (400)
+POST {{base}}/api/itens
+Content-Type: application/json
+
+{ "titulo": "" }
+
+### 10. Item inexistente (404)
+GET {{base}}/api/itens/9999
+
+### 11. Remover item
+DELETE {{base}}/api/itens/4
